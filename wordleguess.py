@@ -13,15 +13,15 @@ print("Hello! Welcome to Wordle Solver. Please enter your guess and the correspo
 for guesses in range(6): #you get six tries 
     while len(guess)!=5: #if you only inputted five letters 
         guess = input("\nYour guess:").lower()
-        if len(guess)!=5:
+        if len(guess)!=5: #if it was not a five letter word inputted
             print("Please input a five lettered word")
 
-    print("Enter g for green, y for yellow, and w for wrong/grey")
+    print("Enter g for green, y for yellow, and w for wrong/grey") 
     feedback=input("Feedback: ").lower()
-    if feedback == "ggggg":
+    if feedback == "ggggg": #if the word was correct
         print("You finished! You won on guess", guesses+1)
         break
-    elif len(feedback)!=5:
+    elif len(feedback)!=5: #if the word is not five letters long
         raise Exception("Word was not five letters long")
 
     temp_tuple = tuple(guess_list)
