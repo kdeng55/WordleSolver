@@ -16,7 +16,7 @@ for guesses in range(6): #you get six tries
         print("Please input a five lettered word")
 
     print("Enter g for green, y for yellow, and w for wrong/grey") 
-    feedback=input("Feedback: ").lower()
+    feedback=input("Feedback:").lower()
     if feedback == "ggggg": #if the word was correct
         print("You finished! You won on guess", guesses+1)
         break
