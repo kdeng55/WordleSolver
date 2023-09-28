@@ -10,11 +10,10 @@ except FileNotFoundError:
     print("filenotfound")
 
 print("Hello! Welcome to Wordle Solver. Please enter your guess and the corresponding colors and I'll let you know what words you can guess next!")
-for guesses in range(6): #you get six tries 
-    while len(guess)!=5: #if you only inputted five letters 
-        guess = input("\nYour guess:").lower()
-        if len(guess)!=5: #if it was not a five letter word inputted
-            print("Please input a five lettered word")
+for guesses in range(6): #you get six tries  
+    guess = input("\nYour guess:").lower()
+    if len(guess)!=5: #if it was not a five letter word inputted
+        print("Please input a five lettered word")
 
     print("Enter g for green, y for yellow, and w for wrong/grey") 
     feedback=input("Feedback: ").lower()
